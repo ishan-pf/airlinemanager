@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx nodemon --exec babel-node index"
+    
+    "clean": "rm -rf build && mkdir build",
+    "build-server": "babel -d ./build ./server -s",
+    "build": "npm run clean && npm run build-css && npm run build-server",
+    "start": "node ./build/index.js"
+
   },
   "keywords": [],
   "author": "",
