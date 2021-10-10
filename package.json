@@ -4,12 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": " babel-node index",
+    "heroku-postbuild": "npm install",
+    "server": "npx nodemon index.js --exec babel-node"
     
-    "clean": "rm -rf build && mkdir build",
-    "build-server": "babel -d ./build ./server -s",
-    "build": "npm run clean && npm run build-css && npm run build-server",
-    "start": "node ./build/index.js"
-
   },
   "keywords": [],
   "author": "",
