@@ -6,6 +6,7 @@ import MongoConnection from './database/connection'
 // import { AirlineModel } from './database/allmodels'
 import airlines from './API/airlines';
 import passengers from './API/passengers'
+const PORT = process.env.PORT || 5000 ;
 const airline = express();
 
 airline.use(express.json());
@@ -36,7 +37,7 @@ airline.get( "/" , async(req , res) => {
 // }
 // })
 
-airline.listen(4005 , (req,res) => {
+airline.listen(PORT , (req,res) => {
     MongoConnection().then(() => console.log("DataBase is Connected")) 
     .catch(() => console.log("Database is Not Connected"))
     console.log("Airline is Ready to Takeoff");
