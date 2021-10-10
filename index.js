@@ -20,7 +20,7 @@ airline.get( "/" , async(req , res) => {
 
     console.log("Welcome to Exampil Airline ! We Will Help you boost your NEET Preparations");
 
-    return res.json({Message : "Please Right This Way"});
+    return res.json({Message : "Welcome to Exampil Airline ! We Will Help you boost your NEET Preparations"});
 })
 
 // airline.get( "/airlines" , async(req,res) => {
